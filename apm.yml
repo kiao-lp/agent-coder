@@ -2,7 +2,7 @@ dependencies:
     apm:
         - path: ./.apm/resources/mcp-fetch
         - git: https://github.com/kiao-lp/mcp-hybridflow.git
-          ref: v1.0.5
+          ref: f2a36b5f8795b48993708e9d87f42f8156cf5ae9
         - path: ./.apm/resources/mcp-markitdown
         - path: ./.apm/resources/mcp-playwright
         - alias: archdia
@@ -29,11 +29,12 @@ dependencies:
         - alias: template-lang
           git: https://github.com/kiao-lp/skill-template-lang.git
           ref: v1.0.1
-        - path: ./.apm/resources/mcp-files
+        - git: git@github.com:kiao-lp/mcp-files.git
+          ref: a47535f2e6ee057f30c641a363fccfd62a92512a
         - path: ./.apm/resources/coder-guidance
 description: Handles complex coding work.
 name: agent-coder
 targets:
     - codex
     - claude
-version: 1.2.0
+version: 1.2.1
