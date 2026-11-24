@@ -30,9 +30,10 @@ dependencies:
           git: https://github.com/kiao-lp/skill-template-lang.git
           ref: v1.0.1
         - path: ./.apm/resources/mcp-files
+        - path: ./.apm/resources/coder-guidance
 description: Handles complex coding work.
 name: agent-coder
 targets:
     - codex
     - claude
-version: 1.1.2
+version: 1.2.0

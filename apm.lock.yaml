@@ -1,6 +1,25 @@
 lockfile_version: '1'
 apm_version: 0.35.1
 dependencies:
+- repo_url: _local/coder-guidance
+  name: coder-guidance
+  version: 1.0.0
+  package_type: apm_package
+  deployed_files:
+  - .agents/skills/coder-guidance
+  - .agents/skills/coder-guidance/SKILL.md
+  - .claude/rules/coding-prose.md
+  - .claude/rules/software-design.md
+  - .claude/skills/coder-guidance
+  - .claude/skills/coder-guidance/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/coder-guidance/SKILL.md: sha256:fcd1e00f57294e7c97c0c95994ee933d5f1c7fd93e08cf36f118bc4786b65eb8
+    .claude/rules/coding-prose.md: sha256:44d81dd79ef20f441e4235e8537f533ab2eb1677edbb3c323eb7ad273b024f8c
+    .claude/rules/software-design.md: sha256:80d22daa158221fa5460ab2c02eb5a88ffb9c251241b7ef3eef87dd19993d6f8
+    .claude/skills/coder-guidance/SKILL.md: sha256:fcd1e00f57294e7c97c0c95994ee933d5f1c7fd93e08cf36f118bc4786b65eb8
+  source: local
+  local_path: ./.apm/resources/coder-guidance
+  content_hash: sha256:db9957419511ec391a67121ebea5f60ca3a9719cc87ce53d6b900f3a763bcae7
 - repo_url: _local/mcp-fetch
   name: mcp-fetch
   version: 1.0.0
@@ -306,7 +325,25 @@ deployments:
   owners:
   - .
   active_owner: .
-  content_hash: sha256:0e8ebf71b87cc30563a24bd17c315cb82fc8d66fb80954cd1fbfaad3f45846be
+  content_hash: sha256:52a98c0f3ed20ad07c1b7f7c7c22a51f836a03a7403c0c9d51e886e3f1f19a10
+- kind: project-relative
+  target: claude
+  value: .claude/rules/coding-prose.md
+  runtime: null
+  scope: project
+  owners:
+  - ./.apm/resources/coder-guidance
+  active_owner: ./.apm/resources/coder-guidance
+  content_hash: sha256:44d81dd79ef20f441e4235e8537f533ab2eb1677edbb3c323eb7ad273b024f8c
+- kind: project-relative
+  target: claude
+  value: .claude/rules/software-design.md
+  runtime: null
+  scope: project
+  owners:
+  - ./.apm/resources/coder-guidance
+  active_owner: ./.apm/resources/coder-guidance
+  content_hash: sha256:80d22daa158221fa5460ab2c02eb5a88ffb9c251241b7ef3eef87dd19993d6f8
 - kind: project-relative
   target: claude
   value: .claude/skills/archdia
@@ -343,6 +380,24 @@ deployments:
   - kiao-lp/skill-archdia
   active_owner: kiao-lp/skill-archdia
   content_hash: sha256:4452a494578f0170f5fdf464f08fa35d6eb203c173642df9946937387e54f3c6
+- kind: project-relative
+  target: claude
+  value: .claude/skills/coder-guidance
+  runtime: null
+  scope: project
+  owners:
+  - ./.apm/resources/coder-guidance
+  active_owner: ./.apm/resources/coder-guidance
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/coder-guidance/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./.apm/resources/coder-guidance
+  active_owner: ./.apm/resources/coder-guidance
+  content_hash: sha256:fcd1e00f57294e7c97c0c95994ee933d5f1c7fd93e08cf36f118bc4786b65eb8
 - kind: project-relative
   target: claude
   value: .claude/skills/hybridflow
@@ -768,6 +823,24 @@ deployments:
   content_hash: sha256:4452a494578f0170f5fdf464f08fa35d6eb203c173642df9946937387e54f3c6
 - kind: project-relative
   target: codex
+  value: .agents/skills/coder-guidance
+  runtime: null
+  scope: project
+  owners:
+  - ./.apm/resources/coder-guidance
+  active_owner: ./.apm/resources/coder-guidance
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/coder-guidance/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./.apm/resources/coder-guidance
+  active_owner: ./.apm/resources/coder-guidance
+  content_hash: sha256:fcd1e00f57294e7c97c0c95994ee933d5f1c7fd93e08cf36f118bc4786b65eb8
+- kind: project-relative
+  target: codex
   value: .agents/skills/hybridflow
   runtime: null
   scope: project
@@ -1161,7 +1234,7 @@ deployments:
   owners:
   - .
   active_owner: .
-  content_hash: sha256:3da9491b334994706473bcee09a7580fef3091590d90671e17196e04920e4075
+  content_hash: sha256:2ff708c1562acb2e0459aa62427718aad2a151dd982a3be4ed82f925e14c54b1
 - kind: uri
   target: mcp
   value: fetch
@@ -1324,5 +1397,5 @@ local_deployed_files:
 - .claude/agents/agent-coder.md
 - .codex/agents/agent-coder.toml
 local_deployed_file_hashes:
-  .claude/agents/agent-coder.md: sha256:0e8ebf71b87cc30563a24bd17c315cb82fc8d66fb80954cd1fbfaad3f45846be
-  .codex/agents/agent-coder.toml: sha256:3da9491b334994706473bcee09a7580fef3091590d90671e17196e04920e4075
+  .claude/agents/agent-coder.md: sha256:52a98c0f3ed20ad07c1b7f7c7c22a51f836a03a7403c0c9d51e886e3f1f19a10
+  .codex/agents/agent-coder.toml: sha256:2ff708c1562acb2e0459aa62427718aad2a151dd982a3be4ed82f925e14c54b1

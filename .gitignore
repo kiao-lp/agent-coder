@@ -6,6 +6,7 @@ dist/
 /.agents/skills/archdia/.gitignore
 /.agents/skills/archdia/SKILL.md
 /.agents/skills/archdia/apm.yml
+/.agents/skills/coder-guidance/SKILL.md
 /.agents/skills/hybridflow/.gitignore
 /.agents/skills/hybridflow/SKILL.md
 /.agents/skills/hybridflow/apm.yml
@@ -45,6 +46,7 @@ dist/
 /.claude/skills/archdia/.gitignore
 /.claude/skills/archdia/SKILL.md
 /.claude/skills/archdia/apm.yml
+/.claude/skills/coder-guidance/SKILL.md
 /.claude/skills/hybridflow/.gitignore
 /.claude/skills/hybridflow/SKILL.md
 /.claude/skills/hybridflow/apm.yml
