@@ -9,11 +9,6 @@
         "mcp-server-fetch"
       ]
     },
-    "kiao-files": {
-      "type": "stdio",
-      "command": "kiao-mcp-files",
-      "args": []
-    },
     "markitdown": {
       "type": "stdio",
       "command": "uvx",

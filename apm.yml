@@ -29,12 +29,10 @@ dependencies:
         - alias: template-lang
           git: https://github.com/kiao-lp/skill-template-lang.git
           ref: v1.0.1
-        - git: git@github.com:kiao-lp/mcp-files.git
-          ref: a47535f2e6ee057f30c641a363fccfd62a92512a
         - path: ./.apm/resources/coder-guidance
 description: Handles complex coding work.
 name: agent-coder
 targets:
     - codex
     - claude
-version: 1.2.1
+version: 1.2.2

@@ -41,14 +41,6 @@ dependencies:
   source: local
   local_path: ./.apm/resources/mcp-playwright
   content_hash: sha256:f3cc3d9eeabb69f061d7bc4a735fab88755ef97a4385149418637fc1406c3b89
-- repo_url: kiao-lp/mcp-files
-  name: mcp-files
-  host: github.com
-  resolved_commit: a47535f2e6ee057f30c641a363fccfd62a92512a
-  resolved_ref: a47535f2e6ee057f30c641a363fccfd62a92512a
-  version: 1.0.0
-  package_type: apm_package
-  content_hash: sha256:efcd9448ad21a2c7ac7aa64c0a9ca707a1535841cc47d3624dda389cc04f1f6c
 - repo_url: kiao-lp/mcp-hybridflow
   name: mcp-hybridflow
   host: github.com
@@ -1247,15 +1239,6 @@ deployments:
   content_hash: sha256:5e23c30431f07b63a22965f9dc976bf0ea781e07512d1f9b7e4b0c8f2f400aa8
 - kind: uri
   target: mcp
-  value: kiao-files
-  runtime: claude
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:9bb2113c9af742c104ace9fb666ddf1bb2bb2645f362d24751dca3e4c9a3ae0b
-- kind: uri
-  target: mcp
   value: kiao-hybridflow
   runtime: claude
   scope: project
@@ -1292,15 +1275,6 @@ deployments:
   content_hash: sha256:d173300129f5c892dfe41e1a5117c0a7d3bd685f234493c9496c13b7052b9251
 - kind: uri
   target: mcp
-  value: kiao-files
-  runtime: codex
-  scope: project
-  owners:
-  - .
-  active_owner: .
-  content_hash: sha256:69628caf71e0d6ab778c88fe67d63197b855d9c84e323a4a935498fe9b839de9
-- kind: uri
-  target: mcp
   value: kiao-hybridflow
   runtime: codex
   scope: project
@@ -1328,7 +1302,6 @@ deployments:
   content_hash: sha256:276489357dbae0828b73763586bc1a3215c9294fc7e1622f26804802d74e93b9
 mcp_servers:
 - fetch
-- kiao-files
 - kiao-hybridflow
 - markitdown
 - playwright
@@ -1342,11 +1315,6 @@ mcp_configs:
     - mcp-server-fetch
     registry: false
     command: uvx
-  kiao-files:
-    name: kiao-files
-    transport: stdio
-    registry: false
-    command: kiao-mcp-files
   kiao-hybridflow:
     name: kiao-hybridflow
     transport: stdio
@@ -1378,19 +1346,16 @@ mcp_configs:
 mcp_target_servers:
   claude:
   - fetch
-  - kiao-files
   - kiao-hybridflow
   - markitdown
   - playwright
   codex:
   - fetch
-  - kiao-files
   - kiao-hybridflow
   - markitdown
   - playwright
 mcp_config_provenance:
   fetch: mcp-fetch
-  kiao-files: mcp-files
   kiao-hybridflow: mcp-hybridflow
   markitdown: mcp-markitdown
   playwright: mcp-playwright
