@@ -10,7 +10,7 @@ dependencies:
           ref: v1.0.1
         - alias: hybridflow
           git: https://github.com/kiao-lp/skill-hybridflow.git
-          ref: v1.0.5
+          ref: v1.0.6
         - alias: kiao-adr
           git: https://github.com/kiao-lp/skill-kiao-adr.git
           ref: v1.0.1
@@ -35,4 +35,4 @@ name: agent-coder
 targets:
     - codex
     - claude
-version: 1.2.2
+version: 1.2.3
